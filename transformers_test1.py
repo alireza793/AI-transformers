@@ -27,4 +27,6 @@ outputs = classifier(text)
 
 # Convert the outputs into a pandas DataFrame for a more readable table format
 # This is especially useful when running batch predictions or logging results
-pd.DataFrame(outputs)
+if __name__ == "__main__":
+    outputs = classifier(text)
+    print(pd.DataFrame(outputs))
